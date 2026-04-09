@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "content": "Artificial Intelligence (AI) is the simulation of human intelligence in machines."
+  },
+  {
+    "id": 2,
+    "content": "Machine Learning is a subset of AI that allows computers to learn from data."
+  },
+  {
+    "id": 4,
+    "content": "Deep Learning is a type of machine learning that uses neural networks."
+  },
+  {
+    "id": 6,
+    "content": "Neural networks are inspired by the structure of the human brain."
+  },
+  {
+    "id": 8,
+    "content": "Natural Language Processing (NLP) helps computers understand human language."
+  },
+  {
+    "id": 10,
+    "content": "Computer Vision allows machines to interpret visual information."
+  }
+]
