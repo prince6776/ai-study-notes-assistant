@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Study Notes Assistant
+
+AI Study Notes Assistant is a small end-to-end AI web application built with Next.js. It answers beginner AI questions using curated study notes and a retrieval-based workflow.
+
+## Features
+
+- Ask beginner questions about AI topics
+- Retrieve relevant note content before generating answers
+- Support focused topics such as:
+  - What is AI?
+  - What is Machine Learning?
+  - What is NLP?
+  - What is Computer Vision?
+- Simple web interface for question and answer flow
+- Designed as a proof of concept for an end-to-end AI assignment
+
+## Architecture
+
+This project follows a simple end-to-end workflow:
+
+1. Raw notes are collected and stored
+2. Notes are cleaned and chunked through ETL
+3. Curated chunks are stored in structured files
+4. The app retrieves relevant chunks for a user question
+5. The reasoning layer generates an answer from the retrieved context
+6. The answer is shown in the Next.js user interface
+
+## Tech Stack
+
+- Next.js
+- TypeScript
+- Retrieval-based AI workflow
+- Vercel for deployment
+
+## Project Structure
+
+```text
+app/        -> Next.js app router pages and API routes
+data/       -> raw, processed, and curated note files
+docs/       -> planning notes, PRD support files, architecture notes
+lib/        -> retrieval logic and helper functions
+public/     -> static assets
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Example supported questions:
 
-## Learn More
+- What is AI?
+- What is Machine Learning?
+- What is NLP?
+- What is Computer Vision?
 
-To learn more about Next.js, take a look at the following resources:
+The app is intentionally narrow in scope and only answers from curated notes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Testing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run project tests with:
 
-## Deploy on Vercel
+```bash
+npm test
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If Playwright is included, run end-to-end tests with:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx playwright test
+```
+
+## Deployment
+
+This project is intended to be deployed on Vercel. Next.js projects can usually be deployed on Vercel using the default project settings after importing the GitHub repository. [web:24][web:21]
+
+## Assignment Workflow Evidence
+
+This repository includes evidence for:
+- grill-me
+- write-a-prd
+- prd-to-issues
+- tdd
+- improve-codebase-architecture
+
+Supporting notes and artifacts are stored in the repository and GitHub Issues.
+
+## Author
+
+Prince Solanki
