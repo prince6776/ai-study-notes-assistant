@@ -1,13 +1,17 @@
-# Grill-me notes
+# grill-me Notes
 
-**Original idea:** Build AI notes app for all topics.
+## Original idea
+A broad AI study helper for many AI topics.
 
-**Grill-me feedback:** 
-- Too broad for POC  
-- Focus on beginner AI topics only
-- Use curated notes, not user uploads
+## What changed after grilling
+The project scope was reduced to a smaller proof of concept.
 
-**What changed:**
-- Limited to 5-10 AI topics (ML, NLP, CV)
-- Fixed notes dataset instead of uploads
-- Simpler RAG flow
+## Final scope
+The app supports beginner AI questions such as:
+- What is AI?
+- What is Machine Learning?
+- What is NLP?
+- What is Computer Vision?
+
+## Why this change helped
+The smaller scope made the app easier to build, test, explain, and deploy.
