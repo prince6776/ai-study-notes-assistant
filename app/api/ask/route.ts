@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
 
     const questionWords = question
       .split(/\s+/)
-      .filter(word => !stopWords.includes(word));
+      
 
     for (let note of notes) {
 
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
 
 const noteWords = cleanText.split(/\s+/);
 
-      const matchCount = noteWords.filter(word =>
+      const matchCount = noteWords.filter((word: string) =>
         questionWords.includes(word)
       ).length;
 
