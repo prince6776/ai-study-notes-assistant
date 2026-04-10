@@ -1,4 +1,4 @@
-﻿# AI Study Notes Assistant 🚀
+﻿# AI Study Notes Assistant
 
 ## Live Demo
 https://ai-study-notes-assistant.vercel.app
