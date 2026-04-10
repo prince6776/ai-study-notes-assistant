@@ -5,7 +5,7 @@ https://ai-study-notes-assistant.vercel.app
 
 ## What it does
 Answers 4 specific AI study questions using curated notes:
-- What is AI?
+- What is Artificial Intelligence?
 - What is Machine Learning? 
 - What is NLP?
 - What is Computer Vision?
