@@ -10,13 +10,13 @@ Answers 4 specific AI study questions using curated notes:
 - What is NLP?
 - What is Computer Vision?
 
-## Architecture (Bronze → Gold)
+## Architecture
 Raw data → ETL → JSON storage → API matching → Next.js UI → Vercel
 - Raw sources: docs/raw-data.md
 - ETL process: docs/etl-process.md  
 - Storage: processed-notes.json
 
-## 5 Required Skills ✓
+## 5 Required Skills
 1. **grill-me** → docs/grill-me-notes.md
 2. **write-a-prd** → Issue #1
 3. **prd-to-issues** → Issues #2-6
