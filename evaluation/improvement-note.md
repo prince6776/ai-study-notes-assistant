@@ -1,19 +1,16 @@
 # Improvement Note
 
-## Weak Point Found
-The main weak point in the earlier version of the app was handling unsupported or slightly varied user questions. While the app answered the four core topics well, it was less clear and less reliable when users asked about topics outside the supported scope.
-
-## Evidence From Evaluation
-The evaluation cases showed that the app performed well on direct questions such as "What is AI?" and "What is NLP?", but weaker cases appeared when the question was outside the supported topic list, such as "What is deep learning?" or "Tell me about robotics."
+## Problem in the Baseline
+The baseline version of the AI Study Notes Assistant used simple keyword checks and a weak fallback matching method based on overlapping words. This sometimes caused the app to guess an answer for unsupported questions instead of clearly saying the topic was outside the app’s scope.
 
 ## Change Made
-I improved the routing logic by making the topic matching more explicit and by adding a clearer fallback response for unsupported topics. This made the app better at deciding when it should answer and when it should clearly say that a topic is not supported.
+The routing logic in `app/api/ask/route.ts` was updated to improve topic matching and remove the weak fallback scoring approach. The improved version keeps direct checks for the supported topics (AI, Machine Learning, NLP, and Computer Vision) and returns a clear fallback message for unsupported topics.
 
-## What Improved
-After the improvement, the app produced clearer behavior on unsupported questions and was easier to evaluate. The final results were stronger because the system now avoids pretending to support topics that are outside the intended scope.
+## Why This Is Better
+This change makes the app more reliable and easier to debug. Supported questions are still answered correctly, paraphrased questions are matched more clearly, and unsupported questions no longer risk receiving a misleading guessed answer.
 
-## What Is Still Weak
-The app is still limited to a small set of AI study-note topics. It does not yet support broader AI concepts, uploaded files, retrieval from many documents, or open-ended general question answering.
+## Evidence from Evaluation
+The same 7 evaluation cases were run again after the improvement. In the final version, all 7 cases passed. In particular, unsupported questions such as “What is deep learning?” and “Tell me about robotics.” now return a clear fallback message instead of an incorrect guessed answer.
 
-## Future Improvement
-If the project grows to include many files or many study topics, I would consider adding retrieval (RAG). That would help the app scale beyond a small fixed set of answers, but it would also add more storage, retrieval, debugging, and evaluation complexity.
+## Final Outcome
+The final version performed better than the baseline on the same evaluation set. The improvement shows that simpler and more explicit routing can be more effective for a small fixed-scope AI application.
