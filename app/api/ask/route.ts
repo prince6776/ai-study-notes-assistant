@@ -27,49 +27,43 @@ export async function POST(req: Request) {
     return NextResponse.json({ answer: "Please enter a question." });
   }
 
-  if (question.includes("nlp") || question.includes("natural language processing")) {
+  if (
+    question.includes("nlp") ||
+    question.includes("natural language processing") ||
+    question.includes("language processing")
+  ) {
     return NextResponse.json({ answer: notes[2].content });
   }
 
-  if (question.includes("machine learning")) {
+  if (
+    question.includes("machine learning") ||
+    question.includes("ml") ||
+    question.includes("learning from data")
+  ) {
     return NextResponse.json({ answer: notes[1].content });
   }
 
-  if (question.includes("computer vision")) {
+  if (
+    question.includes("computer vision") ||
+    question.includes("vision") ||
+    question.includes("images") ||
+    question.includes("videos") ||
+    question.includes("image recognition")
+  ) {
     return NextResponse.json({ answer: notes[3].content });
   }
 
   if (
     question === "what is ai?" ||
     question === "what is ai" ||
-    question.includes("artificial intelligence")
+    question.includes("artificial intelligence") ||
+    question === "ai"
   ) {
     return NextResponse.json({ answer: notes[0].content });
   }
 
-  const stopWords = ["what", "is", "the", "a", "an", "of", "in", "to", "and"];
-  const questionWords = question
-    .split(/\s+/)
-    .filter((word: string) => !stopWords.includes(word));
-
-  let bestMatch = "";
-  let bestScore = 0;
-
-  for (const note of notes) {
-    const cleanText = note.content.toLowerCase();
-    const noteWords = cleanText.split(/\s+/);
-
-    const matchCount = noteWords.filter((word: string) =>
-      questionWords.includes(word)
-    ).length;
-
-    if (matchCount > bestScore) {
-      bestScore = matchCount;
-      bestMatch = note.content;
-    }
-  }
-
   return NextResponse.json({
-    answer: bestMatch || "Sorry, I don't know the answer."
+    answer:
+      "Sorry, this app currently supports only AI, Machine Learning, NLP, and Computer Vision."
   });
 }

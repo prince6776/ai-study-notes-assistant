@@ -1,0 +1,51 @@
+[
+  {
+    "id": "case-1",
+    "question": "What is AI?",
+    "expected_topic": "AI",
+    "expected_behavior": "Return the stored explanation for Artificial Intelligence.",
+    "case_type": "representative"
+  },
+  {
+    "id": "case-2",
+    "question": "What is Machine Learning?",
+    "expected_topic": "Machine Learning",
+    "expected_behavior": "Return the stored explanation for Machine Learning.",
+    "case_type": "representative"
+  },
+  {
+    "id": "case-3",
+    "question": "What is NLP?",
+    "expected_topic": "NLP",
+    "expected_behavior": "Return the stored explanation for Natural Language Processing.",
+    "case_type": "representative"
+  },
+  {
+    "id": "case-4",
+    "question": "What is Computer Vision?",
+    "expected_topic": "Computer Vision",
+    "expected_behavior": "Return the stored explanation for Computer Vision.",
+    "case_type": "representative"
+  },
+  {
+    "id": "case-5",
+    "question": "Explain machine learning in simple words.",
+    "expected_topic": "Machine Learning",
+    "expected_behavior": "Still match the Machine Learning topic even though the wording is different.",
+    "case_type": "representative"
+  },
+  {
+    "id": "case-6",
+    "question": "What is deep learning?",
+    "expected_topic": "unsupported",
+    "expected_behavior": "Do not pretend the app supports this; respond with a fallback or unsupported-topic message.",
+    "case_type": "failure"
+  },
+  {
+    "id": "case-7",
+    "question": "Tell me about robotics.",
+    "expected_topic": "unsupported",
+    "expected_behavior": "Do not pretend the app supports this; respond with a fallback or unsupported-topic message.",
+    "case_type": "failure"
+  }
+]
